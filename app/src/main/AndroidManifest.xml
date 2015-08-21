@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jobshare.menu" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <!--ShareLine & Moment-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--Camera-->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="JobShare"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name=".Splash"
+            android:theme="@style/Theme"
+            android:screenOrientation="portrait"
+            android:noHistory="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".Login"
+            android:theme="@style/Theme"/>
+
+        <activity
+            android:name=".Register"
+            android:theme="@style/Theme"/>
+
+        <!--SlideMenu-->
+        <activity android:name=".SlideActivity"/>
+
+        <!--ShareLine-->
+        <activity android:name=".JobType"
+            android:label="JobType"/>
+
+        <activity
+            android:name=".NewPost"
+            android:label="NewPost"/>
+
+        <activity
+            android:name=".ShareLineActivity"
+            android:label="ShareLine"/>
+
+        <activity android:name=".DetailActivity"
+            android:label="Details"/>
+
+         <!--Moment-->
+        <activity
+            android:name=".MomentActivity"
+            android:label="Moment"/>
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="Moment"/>
+
+       <activity
+            android:name=".CameraActivity"
+            android:label="Camera">
+       </activity>
+
+        <activity
+            android:name=".ContestActivity"
+            android:label="Contest"/>
+
+        <activity
+            android:name=".MeActivity"
+            android:label="Profile"/>
+
+    </application>
+</manifest>

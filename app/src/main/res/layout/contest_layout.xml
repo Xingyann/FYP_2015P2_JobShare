@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#444444"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:text="Theme:Construction Workers"
+        android:textColor="#ffffffff"
+        android:textSize="13dp"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/foreignworker"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="30dp"/>
+
+    <LinearLayout 
+        android:id="@+id/activity_countdown_wheels_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/fifteen_dp"
+        android:paddingRight="@dimen/fifteen_dp"
+        android:paddingTop="@dimen/twenty_dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    
+        <com.example.jobshare.menu.ProgressWheel
+            android:id="@+id/activity_countdown_timer_days"     
+            android:layout_width="0dp"    
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp" 
+            ProgressWheel:rimColor="@color/rim_color_gray"
+            ProgressWheel:barColor="@color/round_progress_blue"
+            ProgressWheel:barWidth="@dimen/six_dp"   
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+        
+        <com.example.jobshare.menu.ProgressWheel
+            android:id="@+id/activity_countdown_timer_hours"     
+            android:layout_width="0dp"    
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp"
+			ProgressWheel:rimColor="@color/rim_color_gray"
+			ProgressWheel:barColor="@color/round_progress_blue"
+			ProgressWheel:barWidth="@dimen/six_dp"
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+            
+        <com.example.jobshare.menu.ProgressWheel
+            android:id="@+id/activity_countdown_timer_minutes"     
+            android:layout_width="0dp"    
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp"
+			ProgressWheel:rimColor="@color/rim_color_gray"
+			ProgressWheel:barColor="@color/round_progress_blue"
+			ProgressWheel:barWidth="@dimen/six_dp"
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center" />
+            
+        <com.example.jobshare.menu.ProgressWheel
+            android:id="@+id/activity_countdown_timer_seconds"     
+            android:layout_width="0dp"    
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ProgressWheel:textColor="@color/center_text"
+            android:tag="Thin"
+            ProgressWheel:textSize="@dimen/twenty_four_sp"
+			ProgressWheel:rimColor="@color/rim_color_gray"
+			ProgressWheel:barColor="@color/round_progress_blue"
+			ProgressWheel:barWidth="@dimen/six_dp"
+            ProgressWheel:rimWidth="@dimen/one_dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+            
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/activity_countdown_labels_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/fifteen_dp"
+        android:paddingRight="@dimen/fifteen_dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/activity_countdown_wheels_layout">
+        
+        <TextView
+            android:id="@+id/activity_countdown_timer_days_text"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/days"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+        
+        <TextView
+            android:id="@+id/activity_countdown_timer_hours_text"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/hours"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+        
+        <TextView
+            android:id="@+id/activity_countdown_timer_minutes_text"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/minutes"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+        
+        <TextView
+            android:id="@+id/activity_countdown_timer_seconds_text"
+            android:textColor="@color/rim_color_gray"
+            android:tag="Thin"
+            android:textSize="@dimen/twenty_sp"
+            android:text="@string/seconds"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+</RelativeLayout>

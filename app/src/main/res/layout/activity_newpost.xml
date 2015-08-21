@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/profile"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgdesc"
+        android:layout_toRightOf="@+id/imgdesc"
+        android:text="Mary Tan"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="-60dp"
+        android:layout_marginLeft="120dp"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/hiddenname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgdesc"
+        android:layout_toRightOf="@+id/imgdesc"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="120dp"
+        android:textSize="17dp" />
+
+    <CheckBox
+        android:id="@+id/chk_hname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set name as hidden"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="110dp"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/jobtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imgdesc"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="JobType :"
+        android:textColor="@android:color/black"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/jobtypelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="-20dp"
+        android:text="Information Security Analyst"
+        android:textColor="@android:color/black"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/qn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you Like or Dislike your job?"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"/>
+
+    <RadioGroup
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:id="@+id/myRadioGroup"
+        android:checkedButton="@+id/like"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_like"
+            android:text="Like" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_dislike"
+            android:text="Dislike"
+            android:layout_marginLeft="40dp"/>
+</RadioGroup>
+
+<EditText
+        android:id="@+id/editlike"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Please specify"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/editdislike"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Please specify"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Word Limit:300 characters"
+        android:textColor="#ff3a3a3a"
+        android:textSize="13dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="POST"
+        android:id="@+id/btnpost"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="#444444"
+        android:textColor="#ffffffff"
+        android:onClick="ShareLineActivity" />
+</LinearLayout>
